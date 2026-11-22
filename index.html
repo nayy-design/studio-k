@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio K Ã¢â‚¬â€ Pilates Reformer, Sculpt & Mouvement</title>
+
+<!-- Polices Google Fonts : League Spartan & Plus Jakarta Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+/* ================= COULEURS & VARIABLES ================= */
+:root {
+--color-plaster: #EEE4DA;
+--color-sand: #D8C4AC;
+--color-clay: #C8A49F;
+--color-burgundy: #4D0E13;
+
+--font-display: 'League Spartan', sans-serif;
+--font-body: 'Plus Jakarta Sans', sans-serif;
+
+--transition-smooth: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+--container-width: 1180px;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+font-size: 16px;
+}
+
+body {
+background-color: var(--color-plaster);
+background-image:
+linear-gradient(rgba(238, 228, 218, 0.68), rgba(238, 228, 218, 0.68)),
+url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+background-size: 420px auto;
+background-repeat: repeat;
+color: var(--color-burgundy);
+font-family: var(--font-body);
+line-height: 1.65;
+overflow-x: hidden;
+}
+
+img {
+max-width: 100%;
+display: block;
+object-fit: cover;
+}
+
+a {
+color: inherit;
+text-decoration: none;
+}
+
+ul {
+list-style: none;
+}
+
+.container {
+width: 90%;
+max-width: var(--container-width);
+margin: 0 auto;
+}
+
+/* ================= TYPOGRAPHIE ================= */
+h1, h2, h3, h4, .logo, .stat-number, .price-amount {
+font-family: var(--font-display);
+font-weight: 600;
+line-height: 1.12;
+letter-spacing: 0.02em;
+}
+
+.eyebrow {
+display: inline-block;
+font-family: var(--font-display);
+font-size: 0.8rem;
+font-weight: 600;
+letter-spacing: 0.16em;
+text-transform: uppercase;
+color: var(--color-burgundy);
+background-color: rgba(200, 164, 159, 0.35);
+padding: 0.35rem 0.85rem;
+border-radius: 999px;
+margin-bottom: 1rem;
+}
+
+.section {
+padding: 6.5rem 0;
+}
+
+.section-header {
+margin-bottom: 3.5rem;
+max-width: 640px;
+}
+
+.section-header.center {
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+.section-title {
+font-size: clamp(2.1rem, 4vw, 3.1rem);
+margin-bottom: 1rem;
+}
+
+.section-intro {
+font-size: 1.05rem;
+opacity: 0.9;
+}
+
+/* ================= BOUTONS ================= */
+.btn {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+font-family: var(--font-display);
+font-weight: 600;
+font-size: 0.95rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+padding: 0.95rem 1.9rem;
+border-radius: 999px;
+border: 1.5px solid var(--color-burgundy);
+cursor: pointer;
+transition: var(--transition-smooth);
+}
+
+.btn-sm {
+padding: 0.65rem 1.35rem;
+font-size: 0.82rem;
+}
+
+.btn-primary {
+background-color: var(--color-burgundy);
+color: var(--color-plaster);
+}
+
+.btn-primary:hover {
+background-color: var(--color-clay);
+border-color: var(--color-clay);
+color: var(--color-burgundy);
+transform: translateY(-2px);
+}
+
+.btn-outline {
+background-color: transparent;
+color: var(--color-burgundy);
+}
+
+.btn-outline:hover {
+background-color: var(--color-burgundy);
+color: var(--color-plaster);
+transform: translateY(-2px);
+}
+
+.btn-light {
+background-color: var(--color-plaster);
+color: var(--color-burgundy);
+border-color: var(--color-plaster);
+}
+
+.btn-light:hover {
+background-color: var(--color-clay);
+border-color: var(--color-clay);
+color: var(--color-burgundy);
+}
+
+.full-width {
+width: 100%;
+}
+
+/* ================= HEADER & MENU CENTRÃƒâ€° ================= */
+.header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1000;
+background-color: rgba(238, 228, 218, 0.85);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+border-bottom: 1px solid rgba(216, 196, 172, 0.85);
+}
+
+.nav-container {
+display: grid;
+grid-template-columns: 1fr auto 1fr;
+align-items: center;
+height: 80px;
+}
+
+.logo {
+font-size: 1.65rem;
+font-weight: 700;
+letter-spacing: 0.14em;
+justify-self: start;
+}
+
+.nav-menu {
+justify-self: center;
+}
+
+.nav-list {
+display: flex;
+align-items: center;
+gap: 2.4rem;
+}
+
+.nav-link {
+font-family: var(--font-display);
+font-size: 0.95rem;
+font-weight: 500;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+position: relative;
+padding: 0.3rem 0;
+}
+
+.nav-link::after {
+content: "";
+position: absolute;
+bottom: 0;
+left: 50%;
+width: 0;
+height: 1.5px;
+background-color: var(--color-burgundy);
+transition: width 0.35s ease, left 0.35s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+width: 100%;
+left: 0;
+}
+
+.nav-actions {
+justify-self: end;
+display: flex;
+align-items: center;
+gap: 1rem;
+}
+
+.burger {
+display: none;
+flex-direction: column;
+gap: 5px;
+background: none;
+border: none;
+cursor: pointer;
+padding: 5px;
+}
+
+.burger span {
+width: 24px;
+height: 2px;
+background-color: var(--color-burgundy);
+transition: var(--transition-smooth);
+}
+
+/* ================= SECTION 1 : HERO ================= */
+.hero {
+padding: 9.5rem 0 5.5rem;
+min-height: 92vh;
+display: flex;
+align-items: center;
+}
+
+.hero-grid {
+display: grid;
+grid-template-columns: 1.1fr 0.9fr;
+gap: 4rem;
+align-items: center;
+}
+
+.hero-title {
+font-size: clamp(2.8rem, 5.5vw, 4.6rem);
+margin-bottom: 1.4rem;
+}
+
+.hero-subtitle {
+font-size: 1.12rem;
+max-width: 500px;
+margin-bottom: 2.2rem;
+}
+
+.hero-cta {
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+}
+
+.hero-visual {
+position: relative;
+display: flex;
+justify-content: center;
+}
+
+.arch-frame {
+width: 100%;
+max-width: 430px;
+height: 550px;
+border-radius: 220px 220px 16px 16px;
+overflow: hidden;
+border: 1.5px solid var(--color-sand);
+box-shadow: 0 24px 50px rgba(77, 14, 19, 0.08);
+position: relative;
+z-index: 2;
+}
+
+.arch-frame img {
+width: 100%;
+height: 100%;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.arch-frame:hover img {
+transform: scale(1.04);
+}
+
+.arch-accent {
+position: absolute;
+width: 100%;
+max-width: 430px;
+height: 550px;
+border-radius: 220px 220px 16px 16px;
+border: 1.5px solid var(--color-clay);
+top: 16px;
+right: calc(50% - 231px);
+z-index: 1;
+}
+
+/* ================= SECTION 2 : LE STUDIO ================= */
+.about-grid {
+display: grid;
+grid-template-columns: 0.95fr 1.05fr;
+gap: 4.5rem;
+align-items: center;
+}
+
+.about-image-wrapper {
+position: relative;
+}
+
+.about-backdrop {
+position: absolute;
+inset: -16px 16px 16px -16px;
+background-color: var(--color-sand);
+border-radius: 16px;
+z-index: 1;
+}
+
+.about-img {
+position: relative;
+z-index: 2;
+border-radius: 16px;
+height: 520px;
+width: 100%;
+}
+
+.section-text {
+margin-bottom: 1.2rem;
+font-size: 1.03rem;
+}
+
+.stats-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 1.5rem;
+margin-top: 2.2rem;
+padding-top: 2rem;
+border-top: 1px solid var(--color-sand);
+}
+
+.stat-number {
+display: block;
+font-size: 2.4rem;
+margin-bottom: 0.25rem;
+}
+
+.stat-label {
+font-size: 0.88rem;
+line-height: 1.35;
+display: block;
+}
+
+/* ================= SECTION 3 : DISCIPLINES ================= */
+.disciplines {
+background-color: rgba(216, 196, 172, 0.42);
+border-top: 1px solid var(--color-sand);
+border-bottom: 1px solid var(--color-sand);
+}
+
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+}
+
+.card {
+background-color: var(--color-plaster);
+border: 1px solid var(--color-sand);
+border-radius: 140px 140px 16px 16px;
+overflow: hidden;
+transition: var(--transition-smooth);
+display: flex;
+flex-direction: column;
+}
+
+.card:hover {
+transform: translateY(-6px);
+border-color: var(--color-clay);
+box-shadow: 0 18px 36px rgba(77, 14, 19, 0.07);
+}
+
+.card-img-wrapper {
+position: relative;
+height: 310px;
+overflow: hidden;
+}
+
+.card-img-wrapper img {
+width: 100%;
+height: 100%;
+transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover .card-img-wrapper img {
+transform: scale(1.05);
+}
+
+.card-badge {
+position: absolute;
+bottom: 14px;
+right: 14px;
+background-color: var(--color-plaster);
+color: var(--color-burgundy);
+font-family: var(--font-display);
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.1em;
+padding: 0.3rem 0.75rem;
+border-radius: 999px;
+border: 1px solid var(--color-sand);
+}
+
+.card-body {
+padding: 1.8rem;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.card-title {
+font-size: 1.5rem;
+margin-bottom: 0.75rem;
+}
+
+.card-text {
+font-size: 0.95rem;
+margin-bottom: 1.5rem;
+flex-grow: 1;
+}
+
+.card-link {
+font-family: var(--font-display);
+font-weight: 600;
+font-size: 0.9rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+transition: gap 0.3s ease;
+}
+
+.card-link:hover {
+gap: 0.8rem;
+}
+
+/* ================= SECTION 4 : ESPACES ================= */
+.bento-grid {
+display: grid;
+grid-template-columns: 1.3fr 1fr;
+grid-template-rows: repeat(2, 280px);
+gap: 1.8rem;
+}
+
+.bento-item {
+position: relative;
+border-radius: 18px;
+overflow: hidden;
+border: 1px solid var(--color-sand);
+}
+
+.bento-large {
+grid-row: span 2;
+}
+
+.bento-item img {
+width: 100%;
+height: 100%;
+transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.bento-item:hover img {
+transform: scale(1.04);
+}
+
+.bento-caption {
+position: absolute;
+bottom: 16px;
+left: 16px;
+right: 16px;
+background-color: rgba(238, 228, 218, 0.92);
+backdrop-filter: blur(8px);
+padding: 1.1rem 1.35rem;
+border-radius: 12px;
+border: 1px solid var(--color-sand);
+}
+
+.bento-caption h3 {
+font-size: 1.25rem;
+margin-bottom: 0.25rem;
+}
+
+.bento-caption p {
+font-size: 0.88rem;
+}
+
+/* ================= SECTION 5 : TARIFS & RÃƒâ€°SERVATION ================= */
+.pricing-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+margin-bottom: 5rem;
+}
+
+.price-card {
+background-color: var(--color-sand);
+border: 1px solid var(--color-clay);
+border-radius: 18px;
+padding: 2.5rem 2rem;
+display: flex;
+flex-direction: column;
+transition: var(--transition-smooth);
+}
+
+.price-card:hover {
+transform: translateY(-5px);
+}
+
+.price-card.featured {
+background-color: var(--color-burgundy);
+color: var(--color-plaster);
+border-color: var(--color-burgundy);
+}
+
+.price-tag {
+font-family: var(--font-display);
+font-size: 0.78rem;
+font-weight: 600;
+letter-spacing: 0.14em;
+text-transform: uppercase;
+opacity: 0.85;
+margin-bottom: 0.6rem;
+}
+
+.price-name {
+font-size: 1.65rem;
+margin-bottom: 0.8rem;
+}
+
+.price-amount {
+font-size: 2.8rem;
+margin-bottom: 1rem;
+}
+
+.price-amount span {
+font-size: 1rem;
+font-weight: 400;
+}
+
+.price-desc {
+font-size: 0.94rem;
+margin-bottom: 1.6rem;
+opacity: 0.92;
+}
+
+.price-features {
+margin-bottom: 2rem;
+flex-grow: 1;
+}
+
+.price-features li {
+padding: 0.55rem 0;
+border-top: 1px solid rgba(200, 164, 159, 0.35);
+font-size: 0.92rem;
+}
+
+.price-features li::before {
+content: "Ã¢â‚¬Â¢ ";
+font-weight: bold;
+}
+
+.booking-box {
+background-color: var(--color-sand);
+border: 1px solid var(--color-clay);
+border-radius: 20px;
+padding: 3rem;
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+gap: 3rem;
+align-items: center;
+}
+
+.booking-info h3 {
+font-size: 2rem;
+margin-bottom: 0.8rem;
+}
+
+.booking-form {
+display: flex;
+flex-direction: column;
+gap: 1.2rem;
+}
+
+.form-row {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.2rem;
+}
+
+.form-group {
+display: flex;
+flex-direction: column;
+gap: 0.4rem;
+}
+
+.form-group label {
+font-family: var(--font-display);
+font-size: 0.85rem;
+font-weight: 600;
+letter-spacing: 0.06em;
+text-transform: uppercase;
+}
+
+.form-group input,
+.form-group select {
+background-color: var(--color-plaster);
+border: 1.5px solid var(--color-clay);
+border-radius: 10px;
+padding: 0.85rem 1rem;
+font-family: var(--font-body);
+font-size: 0.95rem;
+color: var(--color-burgundy);
+outline: none;
+transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+border-color: var(--color-burgundy);
+}
+
+.form-feedback {
+font-size: 0.92rem;
+font-weight: 500;
+min-height: 1.4rem;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+background-color: var(--color-burgundy);
+color: var(--color-plaster);
+padding: 4.5rem 0 2rem;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: 1.4fr 1fr 1fr;
+gap: 3rem;
+padding-bottom: 3rem;
+border-bottom: 1px solid rgba(216, 196, 172, 0.25);
+}
+
+.footer-logo {
+display: inline-block;
+margin-bottom: 0.8rem;
+}
+
+.footer-tagline {
+max-width: 300px;
+opacity: 0.85;
+font-size: 0.95rem;
+}
+
+.footer h4 {
+font-size: 1.1rem;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+margin-bottom: 0.9rem;
+color: var(--color-sand);
+}
+
+.footer p {
+font-size: 0.93rem;
+margin-bottom: 0.4rem;
+opacity: 0.9;
+}
+
+.footer-bottom {
+padding-top: 1.8rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 0.85rem;
+opacity: 0.8;
+}
+
+.socials {
+display: flex;
+gap: 1.5rem;
+}
+
+.socials a:hover {
+color: var(--color-clay);
+}
+
+/* ================= ANIMATIONS SCROLL REVEAL ================= */
+.reveal {
+opacity: 0;
+transform: translateY(26px);
+transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 960px) {
+.hero-grid,
+.about-grid,
+.booking-box {
+grid-template-columns: 1fr;
+gap: 2.5rem;
+}
+
+.cards-grid,
+.pricing-grid {
+grid-template-columns: 1fr;
+}
+
+.bento-grid {
+grid-template-columns: 1fr;
+grid-template-rows: auto;
+}
+
+.bento-large {
+grid-row: span 1;
+}
+
+.bento-item {
+height: 320px;
+}
+
+.arch-accent {
+display: none;
+}
+}
+
+@media (max-width: 768px) {
+.nav-container {
+display: flex;
+justify-content: space-between;
+}
+
+.burger {
+display: flex;
+}
+
+.nav-menu {
+position: fixed;
+top: 80px;
+left: 0;
+width: 100%;
+background-color: var(--color-plaster);
+border-bottom: 1px solid var(--color-sand);
+padding: 2rem 0;
+transform: translateY(-120%);
+opacity: 0;
+pointer-events: none;
+transition: var(--transition-smooth);
+}
+
+.nav-menu.open {
+transform: translateY(0);
+opacity: 1;
+pointer-events: auto;
+}
+
+.nav-list {
+flex-direction: column;
+gap: 1.5rem;
+text-align: center;
+}
+
+.form-row,
+.footer-grid {
+grid-template-columns: 1fr;
+}
+
+.booking-box {
+padding: 2rem 1.4rem;
+}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER & NAVIGATION CENTRÃƒâ€°E -->
+<header class="header" id="header">
+<div class="container nav-container">
+<a href="#accueil" class="logo">STUDIO K</a>
+
+<nav class="nav-menu" id="nav-menu" aria-label="Navigation principale">
+<ul class="nav-list">
+<li><a href="#studio" class="nav-link">Le Studio</a></li>
+<li><a href="#disciplines" class="nav-link">Disciplines</a></li>
+<li><a href="#espaces" class="nav-link">Espaces</a></li>
+<li><a href="#tarifs" class="nav-link">Tarifs</a></li>
+</ul>
+</nav>
+
+<div class="nav-actions">
+<a href="#reservation" class="btn btn-primary btn-sm">RÃƒÂ©server</a>
+<button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</div>
+</div>
+</header>
+
+<main>
+<!-- SECTION 1 : HERO -->
+<section class="hero" id="accueil">
+<div class="container hero-grid">
+<div class="hero-content reveal">
+<span class="eyebrow">PILATES CONTEMPORAIN & ARCHITECTURE</span>
+<h1 class="hero-title">Sculpter le mouvement.<br>Habiter l'espace.</h1>
+<p class="hero-subtitle">
+Un sanctuaire minÃƒÂ©ral pensÃƒÂ© pour aligner le corps et apaiser l'esprit.
+DÃƒÂ©couvrez une pratique exigeante et fluide sur Reformer, au sol et en suspension.
+</p>
+<div class="hero-cta">
+<a href="#disciplines" class="btn btn-primary">DÃƒÂ©couvrir les sÃƒÂ©ances</a>
+<a href="#espaces" class="btn btn-outline">Explorer le lieu</a>
+</div>
+</div>
+
+<div class="hero-visual reveal">
+<div class="arch-frame">
+<img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=900&q=85" alt="SÃƒÂ©ance de Pilates Reformer chez Studio K">
+</div>
+<div class="arch-accent"></div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 2 : LE STUDIO -->
+<section class="section about" id="studio">
+<div class="container about-grid">
+<div class="about-image-wrapper reveal">
+<div class="about-backdrop"></div>
+<img src="https://images.unsplash.com/photo-1510894347712-4b9cbefb80ad?auto=format&fit=crop&w=900&q=85" alt="La communautÃƒÂ© Studio K dans la salle lumineuse" class="about-img">
+</div>
+
+<div class="about-content reveal">
+<span class="eyebrow">NOTRE PHILOSOPHIE</span>
+<h2 class="section-title">L'ÃƒÂ©quilibre entre force profonde et douceur minÃƒÂ©rale</h2>
+<p class="section-text">
+Chez <strong>Studio K</strong>, chaque dÃƒÂ©tail architectural favorise la reconnexion ÃƒÂ  soi :
+murs en plÃƒÂ¢tre brut, lumiÃƒÂ¨re naturelle filtrÃƒÂ©e, courbes organiques et ÃƒÂ©quipements haut de gamme.
+</p>
+<p class="section-text">
+Nos cours en effectif volontairement rÃƒÂ©duit garantissent un accompagnement prÃƒÂ©cis,
+adaptÃƒÂ© ÃƒÂ  votre posture et ÃƒÂ  votre rythme, quel que soit votre niveau.
+</p>
+
+<div class="stats-grid">
+<div class="stat-item">
+<span class="stat-number">08</span>
+<span class="stat-label">Reformers maximum par cours</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">03</span>
+<span class="stat-label">Disciplines complÃƒÂ©mentaires</span>
+</div>
+<div class="stat-item">
+<span class="stat-number">50'</span>
+<span class="stat-label">De pratique ciblÃƒÂ©e et fluide</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 3 : DISCIPLINES -->
+<section class="section disciplines" id="disciplines">
+<div class="container">
+<div class="section-header center reveal">
+<span class="eyebrow">LES PRATIQUES</span>
+<h2 class="section-title">Trois approches du mouvement</h2>
+<p class="section-intro">
+Des formats pensÃƒÂ©s pour renforcer les chaÃƒÂ®nes musculaires profondes, amÃƒÂ©liorer la mobilitÃƒÂ© et libÃƒÂ©rer les tensions.
+</p>
+</div>
+
+<div class="cards-grid">
+<article class="card reveal">
+<div class="card-img-wrapper">
+<img src="https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?auto=format&fit=crop&w=800&q=85" alt="Cours de Reformer Pilates">
+<span class="card-badge">50 MIN</span>
+</div>
+<div class="card-body">
+<h3 class="card-title">Reformer Signature</h3>
+<p class="card-text">
+Travail en rÃƒÂ©sistance contrÃƒÂ´lÃƒÂ©e sur machine Reformer pour allonger la silhouette, gainer le centre et affiner la posture.
+</p>
+<a href="#reservation" class="card-link">RÃƒÂ©server ce cours <span>Ã¢â€ â€™</span></a>
+</div>
+</article>
+
+<article class="card reveal">
+<div class="card-img-wrapper">
+<img src="https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&w=800&q=85" alt="Cours de Mat & Sculpt avec anneaux">
+<span class="card-badge">50 MIN</span>
+</div>
+<div class="card-body">
+<h3 class="card-title">Mat & Sculpt</h3>
+<p class="card-text">
+Pilates au sol rythmÃƒÂ© avec accessoires (Magic Circle, poids lÃƒÂ©gers) pour intensifier le tonus musculaire et l'endurance.
+</p>
+<a href="#reservation" class="card-link">RÃƒÂ©server ce cours <span>Ã¢â€ â€™</span></a>
+</div>
+</article>
+
+<article class="card reveal">
+<div class="card-img-wrapper">
+<img src="https://images.unsplash.com/photo-1517637385-c1050dc6d0e4?auto=format&fit=crop&w=800&q=85" alt="Cours d'Aerial Pilates en hamac">
+<span class="card-badge">50 MIN</span>
+</div>
+<div class="card-body">
+<h3 class="card-title">Aerial Flow</h3>
+<p class="card-text">
+Mouvement en suspension dans un hamac en tissu souple pour dÃƒÂ©compresser la colonne vertÃƒÂ©brale et gagner en fluiditÃƒÂ©.
+</p>
+<a href="#reservation" class="card-link">RÃƒÂ©server ce cours <span>Ã¢â€ â€™</span></a>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<!-- SECTION 4 : ESPACES -->
+<section class="section spaces" id="espaces">
+<div class="container">
+<div class="section-header reveal">
+<span class="eyebrow">L'ARCHITECTURE DU LIEU</span>
+<h2 class="section-title">Un refuge sensoriel avant et aprÃƒÂ¨s l'effort</h2>
+</div>
+
+<div class="bento-grid">
+<div class="bento-item bento-large reveal">
+<img src="https://images.unsplash.com/photo-1637666062717-1c6bcfa4a4df?auto=format&fit=crop&w=1000&q=85" alt="La salle principale aux miroirs en arche">
+<div class="bento-caption">
+<h3>La Salle des Arches</h3>
+<p>LumiÃƒÂ¨re douce, miroirs rÃƒÂ©troÃƒÂ©clairÃƒÂ©s et Reformers en bois naturel.</p>
+</div>
+</div>
+
+<div class="bento-item reveal">
+<img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=800&q=85" alt="Le salon lounge courbe">
+<div class="bento-caption">
+<h3>Le Lounge Organique</h3>
+<p>Un espace calme aux lignes courbes pour ralentir avant votre sÃƒÂ©ance.</p>
+</div>
+</div>
+
+<div class="bento-item reveal">
+<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=85" alt="Le comptoir cafÃƒÂ© et boissons">
+<div class="bento-caption">
+<h3>Le Comptoir MinÃƒÂ©ral</h3>
+<p>Matcha, infusions botaniques et cafÃƒÂ©s de spÃƒÂ©cialitÃƒÂ© ÃƒÂ  savourer sur place.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SECTION 5 : TARIFS & RÃƒâ€°SERVATION -->
+<section class="section pricing-booking" id="tarifs">
+<div class="container">
+<div class="section-header center reveal">
+<span class="eyebrow">FORMULES</span>
+<h2 class="section-title">Choisissez votre rythme</h2>
+</div>
+
+<div class="pricing-grid">
+<div class="price-card reveal">
+<span class="price-tag">DÃƒâ€°COUVERTE</span>
+<h3 class="price-name">SÃƒÂ©ance d'essai</h3>
+<div class="price-amount">28 Ã¢â€šÂ¬</div>
+<p class="price-desc">Valable sur toutes nos disciplines pour une premiÃƒÂ¨re immersion au Studio K.</p>
+<ul class="price-features">
+<li>1 sÃƒÂ©ance de 50 minutes</li>
+<li>AccÃƒÂ¨s au lounge & vestiaires</li>
+<li>Chaussettes antidÃƒÂ©rapantes offertes</li>
+</ul>
+<a href="#reservation" class="btn btn-outline full-width" data-formula="SÃƒÂ©ance d'essai (28 Ã¢â€šÂ¬)">SÃƒÂ©lectionner</a>
+</div>
+
+<div class="price-card featured reveal">
+<span class="price-tag">LE PLUS CHOISI</span>
+<h3 class="price-name">Carnet 5 SÃƒÂ©ances</h3>
+<div class="price-amount">145 Ã¢â€šÂ¬</div>
+<p class="price-desc">La libertÃƒÂ© de varier entre Reformer, Mat & Sculpt et Aerial Flow pendant 2 mois.</p>
+<ul class="price-features">
+<li>Soit 29 Ã¢â€šÂ¬ la sÃƒÂ©ance</li>
+<li>ValiditÃƒÂ© de 60 jours</li>
+<li>1 boisson offerte au comptoir</li>
+</ul>
+<a href="#reservation" class="btn btn-light full-width" data-formula="Carnet 5 SÃƒÂ©ances (145 Ã¢â€šÂ¬)">SÃƒÂ©lectionner</a>
+</div>
+
+<div class="price-card reveal">
+<span class="price-tag">RÃƒâ€°GULARITÃƒâ€°</span>
+<h3 class="price-name">Abonnement Rituel</h3>
+<div class="price-amount">210 Ã¢â€šÂ¬<span>/mois</span></div>
+<p class="price-desc">Pour ancrer le Pilates dans votre quotidien avec 8 sÃƒÂ©ances chaque mois.</p>
+<ul class="price-features">
+<li>8 sÃƒÂ©ances par mois (26,25 Ã¢â€šÂ¬/cours)</li>
+<li>RÃƒÂ©servation prioritaire sur le planning</li>
+<li>Sans engagement de durÃƒÂ©e</li>
+</ul>
+<a href="#reservation" class="btn btn-outline full-width" data-formula="Abonnement Rituel (210 Ã¢â€šÂ¬/mois)">SÃƒÂ©lectionner</a>
+</div>
+</div>
+
+<div class="booking-box reveal" id="reservation">
+<div class="booking-info">
+<span class="eyebrow">RÃƒâ€°SERVATION EN LIGNE</span>
+<h3>Planifiez votre prochaine sÃƒÂ©ance</h3>
+<p>ComplÃƒÂ©tez ce formulaire rapide, notre ÃƒÂ©quipe vous confirme votre crÃƒÂ©neau sous 2 heures.</p>
+</div>
+
+<form class="booking-form" id="booking-form">
+<div class="form-row">
+<div class="form-group">
+<label for="name">Nom complet</label>
+<input type="text" id="name" name="name" placeholder="Camille Laurent" required>
+</div>
+<div class="form-group">
+<label for="email">Adresse e-mail</label>
+<input type="email" id="email" name="email" placeholder="camille@exemple.fr" required>
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-group">
+<label for="discipline">Discipline souhaitÃƒÂ©e</label>
+<select id="discipline" name="discipline" required>
+<option value="Reformer Signature">Reformer Signature</option>
+<option value="Mat & Sculpt">Mat & Sculpt</option>
+<option value="Aerial Flow">Aerial Flow</option>
+</select>
+</div>
+<div class="form-group">
+<label for="formula">Formule</label>
+<select id="formula" name="formula">
+<option value="SÃƒÂ©ance d'essai (28 Ã¢â€šÂ¬)">SÃƒÂ©ance d'essai (28 Ã¢â€šÂ¬)</option>
+<option value="Carnet 5 SÃƒÂ©ances (145 Ã¢â€šÂ¬)">Carnet 5 SÃƒÂ©ances (145 Ã¢â€šÂ¬)</option>
+<option value="Abonnement Rituel (210 Ã¢â€šÂ¬/mois)">Abonnement Rituel (210 Ã¢â€šÂ¬/mois)</option>
+</select>
+</div>
+</div>
+
+<button type="submit" class="btn btn-primary full-width">Confirmer ma demande</button>
+<p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+<div class="container footer-grid">
+<div>
+<a href="#accueil" class="logo footer-logo">STUDIO K</a>
+<p class="footer-tagline">Pilates contemporain, architecture minÃƒÂ©rale & bien-ÃƒÂªtre.</p>
+</div>
+
+<div>
+<h4>Le Studio</h4>
+<p>14 Rue des Arches, 75003 Paris</p>
+<p>Lun Ã¢â‚¬â€œ Dim : 07h30 Ã¢â‚¬â€œ 21h00</p>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>bonjour@studiok-pilates.fr</p>
+<p>01 42 68 90 12</p>
+</div>
+</div>
+<div class="container footer-bottom">
+<p>Ã‚Â© 2026 Studio K. Tous droits rÃƒÂ©servÃƒÂ©s.</p>
+<div class="socials">
+<a href="#accueil">Instagram</a>
+<a href="#accueil">TikTok</a>
+</div>
+</div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+const burger = document.getElementById("burger");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+
+burger.addEventListener("click", () => {
+const isOpen = navMenu.classList.toggle("open");
+burger.setAttribute("aria-expanded", isOpen);
+});
+
+navLinks.forEach((link) => {
+link.addEventListener("click", () => {
+navMenu.classList.remove("open");
+burger.setAttribute("aria-expanded", "false");
+});
+});
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+(entries, observer) => {
+entries.forEach((entry) => {
+if (entry.isIntersecting) {
+entry.target.classList.add("visible");
+observer.unobserve(entry.target);
+}
+});
+},
+{
+threshold: 0.14,
+rootMargin: "0px 0px -40px 0px",
+}
+);
+
+revealElements.forEach((el) => revealObserver.observe(el));
+
+const sections = document.querySelectorAll("section[id]");
+
+window.addEventListener("scroll", () => {
+const scrollY = window.scrollY + 140;
+
+sections.forEach((section) => {
+const sectionTop = section.offsetTop;
+const sectionHeight = section.offsetHeight;
+const sectionId = section.getAttribute("id");
+const activeLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
+
+if (activeLink) {
+if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+activeLink.classList.add("active");
+} else {
+activeLink.classList.remove("active");
+}
+}
+});
+});
+
+const formulaButtons = document.querySelectorAll("[data-formula]");
+const formulaSelect = document.getElementById("formula");
+
+formulaButtons.forEach((button) => {
+button.addEventListener("click", () => {
+const chosenFormula = button.getAttribute("data-formula");
+if (formulaSelect) {
+formulaSelect.value = chosenFormula;
+}
+});
+});
+
+const bookingForm = document.getElementById("booking-form");
+const formFeedback = document.getElementById("form-feedback");
+
+if (bookingForm) {
+bookingForm.addEventListener("submit", (e) => {
+e.preventDefault();
+const name = document.getElementById("name").value.trim();
+const discipline = document.getElementById("discipline").value;
+
+formFeedback.textContent = `Merci ${name}, votre demande pour "${discipline}" est enregistrÃƒÂ©e. Nous vous confirmons votre sÃƒÂ©ance trÃƒÂ¨s vite.`;
+bookingForm.reset();
+});
+}
+});
+</script>
+</body>
+</html>
